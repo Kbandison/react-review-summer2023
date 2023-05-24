@@ -39,6 +39,7 @@ function App() {
   // }
   const inputHandler = event => setInputString(event.target.value)
 
+  const buttonArray = ["+Add+","-Subtract-","-Divide-","*Multiply*","^Power^"]
 
   return (
     <div className="App">
@@ -86,7 +87,7 @@ function App() {
         <button onClick={() => setNum(num / 2)} >Divide</button>   
         <button onClick={() => setNum(num * num)}>Multiply</button>  
          */}
-        <CalcButton 
+        {/* <CalcButton 
           name="+Add+"
           num={num}
           setNum={setNum}
@@ -100,8 +101,26 @@ function App() {
           name="-Divide-"
           num={num}
           setNum={setNum}
-        />               
-   
+        />     
+        <CalcButton 
+          name="*Multiply*"
+          num={num}
+          setNum={setNum}
+        /> 
+        <CalcButton 
+          name="^Power^"
+          num={num}
+          setNum={setNum}
+        />              
+    */}
+      {
+        buttonArray.map(element =>  
+        <CalcButton 
+          name={element}
+          num={num}
+          setNum={setNum}
+        />)
+      }
     
     
       </div>

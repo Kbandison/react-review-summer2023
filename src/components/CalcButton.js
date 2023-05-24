@@ -17,7 +17,15 @@ const switchCase = (param, num) => {  // syncronous only
         case "-Divide-":
             // all params passed into switch case
             return num / 2
-            
+
+        // Multiply
+        case "*Multiply*":
+            return num * num
+
+        // Square - Power of 2
+        case "^Power^":
+            return num ** 2
+        
         default:
             break;
     }
